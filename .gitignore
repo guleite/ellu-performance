@@ -1,0 +1,13 @@
+# Arquivos de sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+# Temporarios do Office
+~$*
+# Compactados (gerados a partir da pasta)
+*.zip
+*.rar
+# Dependencias e builds
+node_modules/
+dist/
+.env
