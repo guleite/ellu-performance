@@ -417,6 +417,10 @@ h1:has(.hl-box), h2:has(.hl-box) { line-height: 1.38; }
   font-family: var(--font-display); font-size: .78rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase;
   box-shadow: 0 0 0 10px var(--green-800);
 }
+/* Versão compacta (página de Serviços): só as letras, centralizadas em cada quadrante */
+.disc-quad--mini { width: 62%; z-index: 1; }
+.disc-quad.disc-quad--mini .q { padding: 0; display: grid; place-items: center; place-content: center; }
+.disc-quad.disc-quad--mini .q b { font-size: clamp(2.2rem, 5vw, 3rem); order: 0; }
 .check-list { list-style: none; padding: 0; margin: 0 0 34px; display: grid; gap: 10px; }
 .check-list li { display: flex; gap: 12px; align-items: flex-start; }
 .check-list li::before {
