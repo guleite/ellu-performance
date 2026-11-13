@@ -445,3 +445,78 @@ const Qualify = (function () {
     Qualify.open({ origem: t.dataset.contact || "site" });
   });
 })();
+
+/* =========================================================
+   Cards do Departamento Pessoal: inclinação 3D, luz que segue
+   o mouse, confete ao clicar e animação automática no celular
+   ========================================================= */
+(function dpCards() {
+  const items = document.querySelectorAll(".dp-item");
+  if (!items.length) return;
+  const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const COLORS = ["#F46F14", "#FF9A4D", "#F2A93B", "#013A36", "#1E8A6B"];
+
+  const play = (el) => {
+    el.classList.remove("is-play");
+    void el.offsetWidth; // reinicia as animações
+    el.classList.add("is-play");
+    clearTimeout(el._playT);
+    el._playT = setTimeout(() => el.classList.remove("is-play"), 2200);
+  };
+
+  const burst = (x, y) => {
+    for (let i = 0; i < 14; i++) {
+      const d = document.createElement("span");
+      d.className = "dp-burst";
+      d.style.left = x + "px";
+      d.style.top = y + "px";
+      d.style.background = COLORS[i % COLORS.length];
+      document.body.appendChild(d);
+      const ang = (Math.PI * 2 * i) / 14 + Math.random() * 0.4;
+      const dist = 40 + Math.random() * 50;
+      const dx = Math.cos(ang) * dist, dy = Math.sin(ang) * dist;
+      d.animate(
+        [
+          { transform: "translate(0,0) scale(1)", opacity: 1 },
+          { transform: `translate(${dx}px, ${dy + 24}px) scale(.2)`, opacity: 0 },
+        ],
+        { duration: 700 + Math.random() * 300, easing: "cubic-bezier(.22,1,.36,1)" }
+      ).onfinish = () => d.remove();
+    }
+  };
+
+  items.forEach((el) => {
+    el.addEventListener("pointermove", (e) => {
+      const r = el.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      el.style.setProperty("--mx", px * 100 + "%");
+      el.style.setProperty("--my", py * 100 + "%");
+      if (calm || e.pointerType !== "mouse") return;
+      el.classList.add("is-tilting");
+      el.style.setProperty("--ry", (px - 0.5) * 12 + "deg");
+      el.style.setProperty("--rx", (0.5 - py) * 12 + "deg");
+    });
+    el.addEventListener("pointerleave", () => {
+      el.classList.remove("is-tilting");
+      el.style.setProperty("--rx", "0deg");
+      el.style.setProperty("--ry", "0deg");
+    });
+    el.addEventListener("click", (e) => {
+      if (calm) return;
+      const r = el.getBoundingClientRect();
+      const x = e.clientX || r.left + r.width / 2, y = e.clientY || r.top + r.height / 2;
+      burst(x, y);
+      el.animate([{ scale: "1" }, { scale: ".95" }, { scale: "1.02" }, { scale: "1" }], { duration: 450, easing: "ease-out" });
+      play(el);
+    });
+    el.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); el.click(); } });
+  });
+
+  // Sem mouse (celular): cada card se anima sozinho quando aparece na tela
+  if (!calm && !window.matchMedia("(hover: hover)").matches) {
+    const io = new IntersectionObserver((entries) => entries.forEach((en) => {
+      if (en.isIntersecting) { setTimeout(() => play(en.target), 350); io.unobserve(en.target); }
+    }), { threshold: 0.6 });
+    items.forEach((el) => io.observe(el));
+  }
+})();
