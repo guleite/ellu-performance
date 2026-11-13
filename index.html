@@ -3,345 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ellü Performance — Líderes preparados, equipes que performam</title>
-  <meta name="description" content="Consultoria de RH estratégico e Departamento Pessoal: treinamento de líderes e equipes, business partner, análise comportamental DISC, engenharia de equipes, folha de pagamento, admissões e eSocial.">
+  <title>Ellü — Escolha seu caminho</title>
+  <meta name="description" content="Ellü: RH + Departamento Pessoal ou Consórcios + Seguros. Escolha como a Ellü pode cuidar de você e da sua empresa.">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#013A36">
+  <meta name="theme-color" content="#FAF6F0">
   <link rel="icon" href="assets/img/logo-green.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1770871821382-60ea99b0a941?auto=format&fit=crop&w=700&q=72">
   <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/portal.css">
 </head>
-<body>
+<body class="portal">
 
-<header class="site-header">
-  <div class="container">
-    <a href="index.html" class="brand" aria-label="Ellü Performance — início"><img src="assets/img/logo-cream.png" alt="Ellü Performance"></a>
-    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav class="nav">
-      <a href="index.html" class="is-active">Início</a>
-      <a href="servicos.html">Serviços</a>
-      <a href="index.html#metodo">Método</a>
-      <a href="index.html#sobre">Sobre</a>
-      <div class="nav-drop">
-        <button type="button" class="nav-drop__btn" aria-expanded="false" aria-controls="menu-testes">Testes Comportamentais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button>
-        <div class="nav-drop__menu" id="menu-testes">
-          <a href="disc.html"><b>Teste DISC</b><small>Seu estilo de comportamento em 4 minutos</small></a>
-          <a href="bigfive.html"><b>Big Five</b><small>Os 5 grandes traços da sua personalidade</small></a>
-        </div>
-      </div>
-      <a href="#" class="btn btn--orange" data-contact="menu">Fale com a Ellü</a>
-    </nav>
-  </div>
+<div class="pt-bg" aria-hidden="true">
+  <span class="pt-c pt-c1" data-depth="18"></span>
+  <span class="pt-c pt-c2" data-depth="-24"></span>
+  <span class="pt-c pt-c3" data-depth="34"></span>
+  <span class="pt-c pt-c4" data-depth="-14"></span>
+  <span class="pt-c pt-c5" data-depth="44"></span>
+</div>
+<div class="pt-glow" aria-hidden="true"></div>
+
+<header class="pt-head">
+  <img class="pt-logo" src="assets/img/logo-green.png" alt="Ellü" width="633" height="387">
+  <nav aria-label="Redes">
+    <a href="https://www.instagram.com/elluperformance/" target="_blank" rel="noopener" aria-label="Instagram da Ellü" data-ico="insta"></a>
+    <a href="#" data-wa aria-label="WhatsApp da Ellü" data-ico="wa"></a>
+  </nav>
 </header>
 
-<main>
-  <!-- HERO -->
-  <section class="hero grain on-dark">
-    <div class="container">
-      <div class="hero-copy">
-        <span class="eyebrow reveal"><span class="dots"></span> Consultoria em pessoas &amp; performance</span>
-        <h1 class="reveal" data-delay="1"><span class="ln">Líderes preparados.</span> <span class="ln">Equipes engajadas.</span> <span class="ln hl">Empresas que performam.</span></h1>
-        <p class="lead reveal" data-delay="2">A Ellü une análise comportamental, treinamentos, RH estratégico e Departamento Pessoal para transformar a forma como a sua empresa lidera, contrata e cresce — com as rotinas em dia.</p>
-        <div class="hero-ctas reveal" data-delay="3">
-          <a href="#" class="btn btn--orange btn--lg" data-contact="hero">Quero um diagnóstico
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="disc.html" class="btn btn--ghost btn--lg">Descobrir meu perfil DISC</a>
-        </div>
-        <div class="hero-proof reveal" data-delay="4">
-          <div class="chips"><span style="background:var(--d)">D</span><span style="background:var(--i);color:var(--green-950)">I</span><span style="background:var(--s)">S</span><span style="background:var(--c)">C</span></div>
-          <span>Teste comportamental <strong style="color:var(--cream)">gratuito</strong> em 4 minutos</span>
-        </div>
-      </div>
-
-      <div class="hero-visual reveal" data-delay="2">
-        <span class="ring"></span>
-        <div class="arch"><img src="assets/img/cintia-hero.jpg" alt="Cíntia Aguiar, fundadora da Ellü Performance"></div>
-        <div class="float-card float-card--a">
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
-          <span><strong>Saiu na mídia</strong>Pequenas Empresas &amp;<br>Grandes Negócios</span>
-        </div>
-        <div class="float-card float-card--b">
-          <span class="ico" style="background:var(--green-800)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M10 3h4v2.5a1.5 1.5 0 1 0 3 0V3h4v7h-2.5a1.5 1.5 0 1 0 0 3H21v8h-7v-2.5a1.5 1.5 0 1 0-3 0V21H3v-8h2.5a1.5 1.5 0 1 0 0-3H3V3h7z"/></svg></span>
-          <span><strong>Engenharia de equipes</strong>a pessoa certa no lugar certo</span>
-        </div>
-      </div>
-    </div>
-    <svg class="wave" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#FAF6F0" d="M0 70c180 40 360 50 560 20S960 0 1160 20s220 60 280 70v30H0z"/></svg>
-  </section>
-
-  <div class="marquee" aria-hidden="true">
-    <div class="marquee__track">
-      <span>Liderança</span><span>Engajamento</span><span>Análise comportamental</span><span>Departamento Pessoal</span><span>Cultura</span><span>Comunicação</span><span>Performance</span><span>Engenharia de equipes</span><span>Folha de pagamento</span>
-      <span>Liderança</span><span>Engajamento</span><span>Análise comportamental</span><span>Departamento Pessoal</span><span>Cultura</span><span>Comunicação</span><span>Performance</span><span>Engenharia de equipes</span><span>Folha de pagamento</span>
-    </div>
+<main class="pt-main">
+  <div class="pt-intro">
+    <span class="eyebrow"><span class="dots"></span> Bem-vindo(a) à Ellü</span>
+    <h1><span class="w"><span>Como</span></span> <span class="w"><span>a</span></span> <span class="w"><span>Ellü</span></span> <span class="w"><span>pode</span></span> <span class="w"><span>cuidar</span></span> <span class="w"><span class="hl">de&nbsp;você?</span></span></h1>
+    <p>Duas frentes, o mesmo cuidado com pessoas. Escolha o caminho que faz sentido para você hoje.</p>
   </div>
 
-  <!-- DORES -->
-  <section class="sec">
-    <div class="container pain-grid">
-      <div class="pain-photo reveal">
-        <div class="arch"><img src="assets/img/lider.jpg" alt="Líder de braços cruzados" style="object-position:50% 20%"></div>
-        <div class="tag"><b>Todo líder deve saber delegar.</b>Mas quem ensinou isso a ele?</div>
-      </div>
-      <div>
-        <span class="eyebrow reveal"><span class="dots"></span> Isso soa familiar?</span>
-        <h2 class="reveal" data-delay="1" style="font-size:clamp(2rem,3.8vw,3.2rem)">Sua empresa cresce. <span class="hl-box">Mas as pessoas acompanham?</span></h2>
-        <p class="reveal" data-delay="2" style="color:var(--ink-soft);font-size:1.08rem">Quando o time não performa, raramente o problema é técnico. Na maioria das vezes, é sobre <strong>comportamento, comunicação e liderança</strong>.</p>
-        <ul class="pain-list">
-          <li class="reveal" data-delay="1">Líderes ótimos tecnicamente, mas que não sabem conduzir pessoas</li>
-          <li class="reveal" data-delay="2">Equipe desengajada, que faz só o mínimo e não veste a camisa</li>
-          <li class="reveal" data-delay="3">Conflitos, ruídos de comunicação e retrabalho constante</li>
-          <li class="reveal" data-delay="4">Contratações que parecem certas — e não dão certo</li>
-          <li class="reveal" data-delay="4">Folha, férias e eSocial no improviso, com medo de multa e passivo trabalhista</li>
+  <div class="pt-choices">
+    <a class="pt-card pt-card--rh" href="https://guleite.github.io/ellu-rh-dp/" data-color="#013A36" data-label="Ellü RH + Departamento Pessoal" data-side="rh">
+      <span class="bub bub--1"></span><span class="bub bub--2"></span>
+      <div class="pt-body">
+        <span class="pt-tag"><i></i> Gestão de pessoas</span>
+        <h2>Ellü <b>RH <span>+</span> Departamento Pessoal</b></h2>
+        <p>Recrutamento e seleção, desenvolvimento de líderes, análise comportamental e rotinas de DP sempre em dia.</p>
+        <ul class="pt-chips">
+          <li><i data-ico="users"></i>Recrutamento</li>
+          <li><i data-ico="star"></i>Liderança</li>
+          <li><i data-ico="puzzle"></i>Perfil DISC</li>
+          <li><i data-ico="doc"></i>Folha e eSocial</li>
         </ul>
-        <a href="#" class="btn btn--green reveal" data-contact="secao dores">Quero resolver isso
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="pt-go">Acessar site <i data-ico="ext"></i></span>
       </div>
-    </div>
-  </section>
+      <div class="pt-media" aria-hidden="true">
+        <span class="pt-ring"></span>
+        <div class="pt-arch"><img src="assets/img/cintia-hero.jpg" alt=""></div>
+        <span class="pt-fl pt-fl--o pt-fl--a" data-ico="users"></span>
+        <span class="pt-fl pt-fl--b" data-ico="puzzle"></span>
+        <span class="pt-fl pt-fl--c" data-ico="chart"></span>
+      </div>
+    </a>
 
-  <!-- SERVIÇOS -->
-  <section class="sec sec--cream" id="servicos">
-    <div class="container">
-      <div class="sec-head">
-        <span class="eyebrow reveal"><span class="dots"></span> O que fazemos</span>
-        <h2 class="reveal" data-delay="1">Soluções para cada fase da <span class="hl">jornada de pessoas</span> da sua empresa</h2>
-        <p class="reveal" data-delay="2">Da admissão ao desenvolvimento contínuo: trabalhamos lado a lado com donos, líderes, RH e DP.</p>
-      </div>
-      <div class="svc-grid">
-        <a href="servicos.html#lideres" class="svc-card reveal">
-          <span class="num">01</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4"/><path d="M5 4h12l-2.5 4L17 12H5"/></svg></span>
-          <h3>Treinamento de Líderes</h3>
-          <p>Formamos líderes que delegam, dão feedback, engajam e entregam resultado — sem apagar incêndio o tempo todo.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a href="servicos.html#equipes" class="svc-card reveal" data-delay="1">
-          <span class="num">02</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14.2c2.9.3 5 2.7 5 5.8"/></svg></span>
-          <h3>Treinamento de Equipes</h3>
-          <p>Comunicação, colaboração e entrosamento na prática, com dinâmicas que geram mudança real no dia a dia.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a href="servicos.html#business-partner" class="svc-card reveal" data-delay="2">
-          <span class="num">03</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="3"/><path d="M9 7V5.5A1.5 1.5 0 0 1 10.5 4h3A1.5 1.5 0 0 1 15 5.5V7M3 13h18"/></svg></span>
-          <h3>Business Partner</h3>
-          <p>Um RH estratégico ao lado do dono e da liderança, conectando decisões de pessoas aos objetivos do negócio.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a href="servicos.html#analise" class="svc-card reveal">
-          <span class="num">04</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 3v9h9M12 12l-6.4 6.4"/></svg></span>
-          <h3>Análise Comportamental</h3>
-          <p>Mapeamento DISC de pessoas e times para contratar melhor, posicionar talentos e reduzir conflitos.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a href="servicos.html#engenharia" class="svc-card reveal" data-delay="1">
-          <span class="num">05</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M10 3h4v2.5a1.5 1.5 0 1 0 3 0V3h4v7h-2.5a1.5 1.5 0 1 0 0 3H21v8h-7v-2.5a1.5 1.5 0 1 0-3 0V21H3v-8h2.5a1.5 1.5 0 1 0 0-3H3V3h7z"/></svg></span>
-          <h3>Engenharia de Equipes</h3>
-          <p>Desenhamos times com a combinação certa de perfis, papéis e rituais — para cada pessoa render o seu melhor.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-        <a href="servicos.html#dp" class="svc-card reveal" data-delay="2">
-          <span class="num">06</span>
-          <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="4" width="14" height="17" rx="2.5"/><path d="M9 4V3h6v1M8.5 10l1.5 1.5L13 8.5M8.5 16l1.5 1.5 3-3M15.5 10.5h.01M15.5 16.5h.01"/></svg></span>
-          <h3>Departamento Pessoal</h3>
-          <p>Admissões, folha, férias, rescisões e eSocial em dia — com processo, prazo e segurança jurídica.</p>
-          <span class="more">Saiba mais <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-        </a>
-      </div>
+    <div class="pt-or" aria-hidden="true">
+      <span class="pt-eyes"><i><b></b></i><i><b></b></i></span>
+      <span class="pt-or__txt">o<span>u</span></span>
     </div>
-  </section>
 
-  <!-- DEPARTAMENTO PESSOAL -->
-  <section class="sec" id="dp">
-    <div class="container dp">
-      <div>
-        <span class="eyebrow reveal"><span class="dots"></span> Departamento Pessoal</span>
-        <h2 class="reveal" data-delay="1">Pessoas se desenvolvem melhor quando <span class="hl-box">a rotina está em dia.</span></h2>
-        <p class="reveal" data-delay="2" style="color:var(--ink-soft);font-size:1.08rem">Não adianta investir em liderança e engajamento se o salário atrasa, as férias se perdem no calendário ou um erro no eSocial vira multa. Por isso a Ellü cuida também do <strong>Departamento Pessoal</strong>: a base que dá segurança para a empresa e tranquilidade para quem trabalha nela.</p>
-        <div class="dp-pillars reveal" data-delay="3">
-          <div><b>RH estratégico</b><span>desenvolve líderes, equipes e cultura</span></div>
-          <span class="plus" aria-hidden="true">+</span>
-          <div><b>Departamento Pessoal</b><span>garante as rotinas, os prazos e a lei</span></div>
-        </div>
-        <div class="hero-ctas reveal" data-delay="4">
-          <a href="#" class="btn btn--orange" data-contact="secao dp">Organizar meu DP
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="servicos.html#dp" class="btn btn--ghost" style="color:var(--green-800)">Ver o que está incluso</a>
-        </div>
-      </div>
-      <div class="dp-grid">
-        <div class="dp-item reveal" data-fx="join" tabindex="0">
-          <span class="dp-chip" aria-hidden="true">👋 Bem-vindo(a)!</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g class="fx-person"><circle cx="10" cy="8" r="3.5"/><path d="M3.5 20c0-3.6 2.9-6.5 6.5-6.5 1.6 0 3 .6 4.2 1.5"/></g><path class="fx-plus" d="M18 14v6M15 17h6"/></svg></span>
-          <h3>Admissões e desligamentos</h3>
-          <p>Documentação, contratos, exames, rescisões e homologações sem pendências.</p>
-        </div>
-        <div class="dp-item reveal" data-delay="1" data-fx="pay" tabindex="0">
-          <span class="dp-chip" aria-hidden="true">💸 Pago no dia certo</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><g class="fx-bill"><rect x="3" y="6" width="18" height="13" rx="2.5"/><path d="M6.5 9.5h.01M17.5 15.5h.01"/></g><circle class="fx-coin" cx="12" cy="12.5" r="2.5"/></svg></span>
-          <h3>Folha de pagamento</h3>
-          <p>Cálculo de salários, horas extras, encargos e benefícios, conferido e no prazo.</p>
-        </div>
-        <div class="dp-item reveal" data-delay="2" data-fx="cal" tabindex="0">
-          <span class="dp-chip" aria-hidden="true">🏖️ Férias planejadas</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17"/><path class="fx-rings" d="M8 3v4M16 3v4"/><path class="fx-mark" d="M8.5 14.5h3"/></svg></span>
-          <h3>Férias, 13º e afastamentos</h3>
-          <p>Controle de períodos, programação de férias e gestão de licenças e atestados.</p>
-        </div>
-        <div class="dp-item reveal" data-delay="3" data-fx="shield" tabindex="0">
-          <span class="dp-chip" aria-hidden="true">🛡️ Zero multa</span>
-          <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path class="fx-shield" d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6L12 3z"/><path class="fx-check" d="M8.8 12l2.2 2.2 4.2-4.4"/></svg></span>
-          <h3>eSocial e conformidade</h3>
-          <p>Obrigações enviadas corretamente e rotinas que previnem multas e passivo trabalhista.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DISC TEASER -->
-  <section class="sec sec--green grain on-dark">
-    <div class="container disc-teaser">
-      <div>
-        <span class="eyebrow reveal"><span class="dots"></span> Teste gratuito</span>
-        <h2 class="reveal" data-delay="1" style="font-size:clamp(2rem,3.8vw,3.2rem)">Você sabe qual é o seu <span class="hl">perfil comportamental?</span></h2>
-        <p class="reveal" data-delay="2" style="color:rgba(243,236,226,.78);font-size:1.08rem">O método DISC revela como você decide, se comunica, reage à pressão e trabalha em equipe. Descubra o seu em poucos minutos.</p>
-        <ul class="check-list reveal" data-delay="3">
-          <li>16 perguntas rápidas sobre situações do dia a dia</li>
-          <li>Resultado na hora, com seus pontos fortes e de atenção</li>
-          <li>Dicas de como você se comunica e lidera melhor</li>
+    <a class="pt-card pt-card--cs" href="https://guleite.github.io/ellu-consorcios-seguros/" data-color="#F46F14" data-label="Ellü Consórcios + Seguros" data-side="cs">
+      <span class="bub bub--1"></span><span class="bub bub--2"></span>
+      <span class="pt-new">Novo</span>
+      <div class="pt-body">
+        <span class="pt-tag"><i></i> Conquistar + proteger</span>
+        <h2>Ellü <b>Consórcios <span>+</span> Seguros</b></h2>
+        <p>Planeje suas conquistas com consórcio e proteja o que importa com seguros — com a consultoria humana da Ellü.</p>
+        <ul class="pt-chips">
+          <li><i data-ico="house"></i>Imóvel</li>
+          <li><i data-ico="car"></i>Automóvel</li>
+          <li><i data-ico="heart"></i>Vida</li>
+          <li><i data-ico="homeShield"></i>Residencial</li>
+          <li><i data-ico="building"></i>Empresarial</li>
         </ul>
-        <div class="hero-ctas reveal" data-delay="4">
-          <a href="disc.html" class="btn btn--orange btn--lg">Fazer o teste DISC
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-          <a href="bigfive.html" class="btn btn--ghost btn--lg">Análise Big Five</a>
-        </div>
+        <span class="pt-go">Conhecer <i data-ico="arrow"></i></span>
       </div>
-      <div class="disc-quad reveal" data-delay="2">
-        <a href="disc.html" class="q"><b>D</b><span>Dominância</span></a>
-        <a href="disc.html" class="q"><b>I</b><span>Influência</span></a>
-        <a href="disc.html" class="q"><span>Conformidade</span><b>C</b></a>
-        <a href="disc.html" class="q"><span>Estabilidade</span><b>S</b></a>
-        <span class="center">Qual é<br>o seu?</span>
+      <div class="pt-media" aria-hidden="true">
+        <span class="pt-ring"></span>
+        <div class="pt-arch"><img src="https://images.unsplash.com/photo-1770871821382-60ea99b0a941?auto=format&fit=crop&w=700&q=72" alt=""></div>
+        <span class="pt-fl pt-fl--g pt-fl--a" data-ico="house"></span>
+        <span class="pt-fl pt-fl--b" data-ico="shield"></span>
+        <span class="pt-fl pt-fl--c" data-ico="car"></span>
       </div>
-    </div>
-  </section>
-
-  <!-- SOBRE -->
-  <section class="sec" id="sobre">
-    <div class="container about">
-      <div class="about-photo reveal">
-        <div class="arch"><img src="assets/img/cintia-2.jpg" alt="Cíntia Aguiar sorrindo"></div>
-        <div class="badge"><div><img src="assets/img/logo-cream.png" alt="">Fundadora</div></div>
-      </div>
-      <div>
-        <span class="eyebrow reveal"><span class="dots"></span> Quem está por trás</span>
-        <h2 class="reveal" data-delay="1">Cíntia Aguiar</h2>
-        <p class="reveal" data-delay="2" style="font-size:1.1rem;color:var(--ink-soft)">Fundadora da Ellü Performance, Cíntia acredita que <strong style="color:var(--green-800)">a empresa só performa quando as pessoas performam</strong> — e que isso começa por uma liderança consciente, próxima e preparada.</p>
-        <p class="reveal" data-delay="2" style="color:var(--ink-soft)">À frente da Ellü, ela conduz diagnósticos, treinamentos e projetos de desenvolvimento humano com empresas que querem crescer sem perder aquilo que as torna únicas: sua gente.</p>
-        <div class="reveal" data-delay="3">
-          <span class="media-pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> Saiu na mídia!</span>
-          <blockquote class="quote" style="margin-top:0">
-            “Os colaboradores possuem desejos e necessidades de crescimento na carreira tanto quanto o dono.”
-            <cite>Cíntia Aguiar em <b>Pequenas Empresas &amp; Grandes Negócios</b> — sobre saúde mental para empreendedores</cite>
-          </blockquote>
-        </div>
-        <a href="#" class="btn btn--orange reveal" data-delay="4" data-contact="secao sobre">Conversar com a Cíntia
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- MÉTODO -->
-  <section class="sec sec--deep grain on-dark" id="metodo">
-    <div class="container">
-      <div class="sec-head center">
-        <span class="eyebrow reveal"><span class="dots"></span> Método Ellü</span>
-        <h2 class="reveal" data-delay="1">Do diagnóstico ao resultado, <span class="hl">sem fórmulas prontas</span></h2>
-        <p class="reveal" data-delay="2">Cada empresa tem uma cultura, um momento e pessoas diferentes. Nosso trabalho começa entendendo isso.</p>
-      </div>
-      <div class="steps">
-        <div class="step reveal"><span class="n">01</span><h3>Diagnóstico</h3><p>Escutamos donos, líderes e equipes para encontrar a raiz do problema — não só os sintomas.</p></div>
-        <div class="step reveal" data-delay="1"><span class="n">02</span><h3>Mapeamento</h3><p>Análise comportamental DISC de pessoas e times para entender como cada um funciona.</p></div>
-        <div class="step reveal" data-delay="2"><span class="n">03</span><h3>Desenvolvimento</h3><p>Treinamentos, mentorias e rituais de gestão sob medida para a realidade da sua empresa.</p></div>
-        <div class="step reveal" data-delay="3"><span class="n">04</span><h3>Acompanhamento</h3><p>Indicadores, ajustes e presença próxima até a mudança virar rotina — e resultado.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INSTAGRAM -->
-  <section class="sec sec--cream">
-    <div class="container">
-      <div class="sec-head" style="display:flex;justify-content:space-between;align-items:end;gap:30px;max-width:none;flex-wrap:wrap">
-        <div style="max-width:620px">
-          <span class="eyebrow reveal"><span class="dots"></span> Conteúdo que transforma</span>
-          <h2 class="reveal" data-delay="1">Liderança na prática, toda semana no Instagram</h2>
-        </div>
-        <a href="#" class="btn btn--green reveal" data-delay="2" target="_blank" rel="noopener">Seguir a Ellü</a>
-      </div>
-      <div class="insta-grid">
-        <a href="#" class="reveal"><img src="assets/img/post-3.jpg" alt="Post: Engaje sua equipe na volta das férias"></a>
-        <a href="#" class="reveal" data-delay="1"><img src="assets/img/post-4.jpg" alt="Post: Colaboração entre equipes"></a>
-        <a href="#" class="reveal" data-delay="2"><img src="assets/img/post-5.jpg" alt="Post: Todo líder deve saber delegar tarefas"></a>
-        <a href="#" class="reveal" data-delay="3"><img src="assets/img/post-2.jpg" alt="Post: Saiu na mídia — Pequenas Empresas, Grandes Negócios"></a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="sec sec--orange grain cta-band">
-    <div class="bubbles" aria-hidden="true">
-      <span style="width:420px;height:420px;left:-120px;top:-160px"></span>
-      <span style="width:300px;height:300px;right:6%;bottom:-140px"></span>
-      <span style="width:180px;height:180px;right:-40px;top:30px"></span>
-    </div>
-    <div class="container" style="position:relative">
-      <span class="eyebrow reveal" style="color:var(--green-900)"><span class="dots" style="--x:1"></span> Próximo passo</span>
-      <h2 class="reveal" data-delay="1">Pronto para destravar a performance do seu time?</h2>
-      <p class="reveal" data-delay="2">Responda a um diagnóstico rápido e receba o retorno da Cíntia e do time Ellü sobre o melhor caminho para a sua empresa.</p>
-      <div class="hero-ctas reveal" data-delay="3">
-        <a href="#" class="btn btn--green btn--lg" data-contact="cta final">Fazer meu diagnóstico
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a href="disc.html" class="btn btn--cream btn--lg">Fazer o teste DISC</a>
-      </div>
-    </div>
-  </section>
+    </a>
+  </div>
 </main>
 
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <img class="logo" src="assets/img/logo-cream-full.png" alt="Ellü Performance">
-        <p style="max-width:22em">Consultoria em pessoas e performance. Desenvolvemos líderes e equipes e cuidamos do Departamento Pessoal de empresas que querem crescer com a sua gente.</p>
-        <div class="socials">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg></a>
-          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 8.5H3.56V20h3.38V8.5ZM5.25 3A1.97 1.97 0 1 0 5.3 7a1.97 1.97 0 0 0-.05-4ZM20.44 13.4c0-3.1-1.65-4.55-3.86-4.55-1.78 0-2.58.98-3.03 1.67V8.5h-3.38c.05.95 0 11.5 0 11.5h3.38v-6.42c0-.34.02-.69.13-.93.27-.69.9-1.4 1.95-1.4 1.38 0 1.93 1.05 1.93 2.6V20h3.38v-6.6Z"/></svg></a>
-          <a href="#" aria-label="WhatsApp" data-contact="rodape"><svg viewBox="0 0 32 32" fill="currentColor"><path d="M16.04 3C9.4 3 4 8.4 4 15.04c0 2.12.55 4.19 1.6 6.02L4 29l8.13-1.56a12 12 0 0 0 3.9.65C22.67 28.09 28 22.7 28 16.06 28 9.4 22.68 3 16.04 3Zm5.45 15.47c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.95 1.17-.18.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48a9 9 0 0 1-1.66-2.06c-.17-.3-.02-.46.13-.61.14-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.63-.93-2.24-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49 1.9.82 2.63.89 3.57.75.57-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg></a>
-        </div>
-      </div>
-      <div>
-        <h4>Navegue</h4>
-        <ul><li><a href="index.html">Início</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="disc.html">Teste DISC</a></li><li><a href="bigfive.html">Teste Big Five</a></li><li><a href="index.html#sobre">Sobre</a></li></ul>
-      </div>
-      <div>
-        <h4>Serviços</h4>
-        <ul><li><a href="servicos.html#lideres">Treinamento de líderes</a></li><li><a href="servicos.html#equipes">Treinamento de equipes</a></li><li><a href="servicos.html#business-partner">Business Partner</a></li><li><a href="servicos.html#analise">Análise comportamental</a></li><li><a href="servicos.html#engenharia">Engenharia de equipes</a></li><li><a href="servicos.html#dp">Departamento Pessoal</a></li></ul>
-      </div>
-      <div>
-        <h4>Contato</h4>
-        <ul><li><a href="#" data-contact="rodape">Falar pelo WhatsApp</a></li><li>contato@elluperformance.com.br</li><li>Atendimento presencial e online</li></ul>
-      </div>
-    </div>
-    <div class="footer-bottom"><span>© <span id="year"></span> Ellü Performance. Todos os direitos reservados.</span><span>Proposta desenvolvida por Concept Agência</span></div>
-  </div>
+<footer class="pt-foot">
+  <span>© <span data-year></span> Ellü Performance · Brasília – DF</span>
+  <span class="pt-hint">Dica: use <kbd>←</kbd> <kbd>→</kbd> e <kbd>Enter</kbd> para escolher</span>
+  <span><a href="https://www.instagram.com/elluperformance/" target="_blank" rel="noopener">@elluperformance</a></span>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<div class="pt-wipe" aria-hidden="true"><div class="pt-wipe__in"><img src="assets/img/logo-cream.png" alt=""><small class="pt-wipe__txt"></small></div></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/portal.js"></script>
 </body>
 </html>
