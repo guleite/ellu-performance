@@ -42,6 +42,19 @@ const ICON = {
     );
   }
 
+  // Submenu (Testes Comportamentais): clique abre/fecha; clique fora ou Esc fecha
+  const drops = document.querySelectorAll(".nav-drop");
+  const closeDrop = (d) => { d.classList.remove("is-open"); d.querySelector(".nav-drop__btn").setAttribute("aria-expanded", "false"); };
+  drops.forEach((d) => {
+    const btn = d.querySelector(".nav-drop__btn");
+    btn.addEventListener("click", () => {
+      const open = d.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open);
+    });
+  });
+  document.addEventListener("click", (e) => drops.forEach((d) => { if (!d.contains(e.target)) closeDrop(d); }));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") drops.forEach(closeDrop); });
+
   const io = new IntersectionObserver(
     (entries) => entries.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } }),
     { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
@@ -63,6 +76,7 @@ const Qualify = (function () {
     "Rotatividade alta (turnover)": "Cada saída leva junto conhecimento, tempo e dinheiro. Dá para estancar — começando por entender por que as pessoas vão embora.",
     "Contratações que não dão certo": "Contratar pelo currículo e desligar pelo comportamento é um padrão comum. A análise comportamental entra justamente aqui.",
     "A empresa cresceu, a gestão de pessoas não": "Crescimento sem estrutura de pessoas cobra a conta rápido. É hora de desenhar papéis, rituais e lideranças para o próximo nível.",
+    "Folha, eSocial e rotinas de DP no improviso": "Um erro pequeno na folha ou no eSocial hoje pode virar multa ou passivo trabalhista amanhã. Com processo e calendário organizados, o DP deixa de ser preocupação.",
   };
 
   const steps = [
@@ -79,7 +93,7 @@ const Qualify = (function () {
       options: [
         { v: "Sou dono(a) / sócio(a)", em: "🚀" },
         { v: "Sou líder / gestor(a) de equipe", em: "🧭" },
-        { v: "Trabalho no RH / Gente & Gestão", em: "🤝" },
+        { v: "Trabalho no RH / DP / Gente & Gestão", em: "🤝" },
         { v: "Quero me desenvolver como profissional", em: "🌱" },
       ],
     },
@@ -99,7 +113,7 @@ const Qualify = (function () {
       title: "Se a gente pudesse resolver UMA coisa amanhã, qual seria?",
       hint: "Escolha a que mais tira seu sono hoje.",
       insight: true,
-      options: Object.keys(PAINS).map((v, i) => ({ v, em: ["😶‍🌫️", "🧩", "⚡", "🚪", "🎯", "📈"][i] })),
+      options: Object.keys(PAINS).map((v, i) => ({ v, em: ["😶‍🌫️", "🧩", "⚡", "🚪", "🎯", "📈", "📋"][i] })),
     },
     {
       id: "urgencia", type: "heat", kicker: "Termômetro",
@@ -121,6 +135,7 @@ const Qualify = (function () {
         { v: "Business Partner (RH estratégico)" },
         { v: "Análise comportamental (DISC)" },
         { v: "Engenharia de equipes" },
+        { v: "Departamento Pessoal (folha, admissões, eSocial)" },
         { v: "Ainda não sei — quero uma orientação" },
       ],
     },
