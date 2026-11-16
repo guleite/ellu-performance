@@ -14,6 +14,8 @@
   document.querySelectorAll("[data-wa]").forEach((a) => { a.href = waLink("Olá, Ellü! Vim pelo site."); a.target = "_blank"; a.rel = "noopener"; });
 
   const cards = [...document.querySelectorAll(".pt-card")];
+  const wrap = document.querySelector(".pt-choices");
+  const ball = document.querySelector(".pt-or__ball");
   const glow = document.querySelector(".pt-glow");
   const circles = [...document.querySelectorAll(".pt-c")];
   const eyes = [...document.querySelectorAll(".pt-eyes i")];
@@ -23,15 +25,43 @@
   /* ---------- olhinhos ---------- */
   let look = { x: innerWidth / 2, y: innerHeight * 0.9 };
   const aim = (x, y) => {
+    look = { x, y };
+    // a bolinha inclina a cabeça: compensa a rotação para o olhar continuar certeiro
+    const lean = (parseFloat(getComputedStyle(ball).rotate) || 0) * Math.PI / 180;
     eyes.forEach((eye) => {
       const r = eye.getBoundingClientRect();
       const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      const a = Math.atan2(y - cy, x - cx);
+      const a = Math.atan2(y - cy, x - cx) - lean;
       const d = Math.min(1, Math.hypot(x - cx, y - cy) / 160);
-      const max = r.width * 0.26;
+      const max = eye.offsetWidth * 0.26;
       eye.firstElementChild.style.transform = `translate(${Math.cos(a) * max * d}px, ${Math.sin(a) * max * d}px)`;
     });
   };
+  // enquanto a bolinha anda junto com a divisa dos cards, os olhos continuam mirando
+  let trackUntil = 0, trackRaf = 0;
+  const track = (ms) => {
+    trackUntil = performance.now() + ms;
+    if (trackRaf) return;
+    const step = (t) => {
+      aim(look.x, look.y);
+      trackRaf = t < trackUntil ? requestAnimationFrame(step) : 0;
+    };
+    trackRaf = requestAnimationFrame(step);
+  };
+
+  /* ---------- frente escolhida (hover/foco) ----------
+     Fica no container, não em cada card: ao cruzar o vão entre os cards a escolha
+     não "pisca" de volta ao repouso — só some quando o cursor sai da área dos cards. */
+  let offTimer = 0;
+  const setOn = (side) => {
+    clearTimeout(offTimer);
+    if ((wrap.dataset.on || null) === side) return;
+    if (side) wrap.dataset.on = side; else delete wrap.dataset.on;
+    document.body.classList.toggle("hov-rh", side === "rh");
+    document.body.classList.toggle("hov-cs", side === "cs");
+    track(1000);
+  };
+  wrap.addEventListener("pointerleave", () => { offTimer = setTimeout(() => setOn(null), 80); });
 
   /* ---------- mouse: brilho, parallax e olhos ---------- */
   let raf = 0, mx = innerWidth / 2, my = innerHeight / 2;
@@ -75,20 +105,18 @@
       card.style.setProperty("--ry", (px - 0.5) * 6 + "deg");
       card.style.setProperty("--rx", (0.5 - py) * 6 + "deg");
     });
-    const enter = () => document.body.classList.add("hov-" + card.dataset.side);
-    const leave = () => {
-      document.body.classList.remove("hov-" + card.dataset.side);
+    const untilt = () => {
       card.classList.remove("is-tilting");
       card.style.setProperty("--rx", "0deg"); card.style.setProperty("--ry", "0deg");
     };
-    card.addEventListener("pointerenter", enter);
-    card.addEventListener("pointerleave", leave);
+    card.addEventListener("pointerenter", (e) => { if (e.pointerType !== "touch") setOn(card.dataset.side); });
+    card.addEventListener("pointerleave", untilt);
     card.addEventListener("focus", () => {
-      enter();
+      setOn(card.dataset.side);
       const r = card.getBoundingClientRect();
       aim(r.left + r.width / 2, r.top + r.height / 2);
     });
-    card.addEventListener("blur", leave);
+    card.addEventListener("blur", () => { untilt(); if (!wrap.matches(":hover")) setOn(null); });
 
     /* ---------- transição ao escolher ---------- */
     card.addEventListener("click", (e) => {
